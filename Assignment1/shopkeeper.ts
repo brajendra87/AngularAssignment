@@ -1,5 +1,5 @@
 
- class shopkeeper
+ class Shopkeeper
 {
 
    GetDiscount(prices: number[], discountPercentage: number)
@@ -10,8 +10,8 @@
    }
 
 }
-var obj=new shopkeeper();
-console.log("Price after discount: "+ obj.GetDiscount([100,200,300],50));
+let shopkeeper=new Shopkeeper();
+console.log("Price after discount: "+ shopkeeper.GetDiscount([100,200,300],50));
 
 
  
