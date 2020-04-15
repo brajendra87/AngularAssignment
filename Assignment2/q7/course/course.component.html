@@ -1,0 +1,6 @@
+<h2>Course </h2>
+
+
+<ul>
+    <li *ngFor="let c of courseList" id="{{c.id}}" (click)="navigation($event)"> {{c.courseName}}</li>
+</ul>

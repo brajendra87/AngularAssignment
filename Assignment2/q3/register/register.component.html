@@ -1,0 +1,44 @@
+<div class="login-form">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <h2 class="text-center">Sign up</h2>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+                <input type="text" class="form-control" name="name" placeholder="User Name" ([ngModel])="name"  formControlName="name">
+            </div>
+            <div class="invalid-field" *ngIf="isSubmitted && f.name.errors">
+                <div *ngIf="f.name.errors.required"> User Name is required</div>
+                <div *ngIf="f.name.errors.minlength"> User Name at least 3 charecters</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+                <input type="text" class="form-control" name="dob" placeholder="dob" formControlName="dob" >
+            </div>
+            <div class="invalid-field" *ngIf="isSubmitted && f.dob.errors">
+                <div *ngIf="f.dob.errors.required"> Date of birth is required</div>
+            </div>
+            
+        </div>
+       
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+                <input type="text" class="form-control" name="address" placeholder="Address"  formControlName="address">
+            </div>
+            <div class="invalid-field" *ngIf="isSubmitted && f.address.errors">
+                <div *ngIf="f.dob.errors.required"> Address is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary login-btn btn-block">Sign Up</button>
+        </div>
+        
+
+    </form>
+    <p class="text-center text-muted small"> have an account? <a routerLink="/login">Sign in here!</a></p>
+</div>
+<b> Data: </b>  {{registrationForm.value | json}}

@@ -1,0 +1,29 @@
+
+<div class="login-form">
+    <form>
+        <h2 class="text-center">Sign in</h2>
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+                <input type="text" class="form-control" name="userName" placeholder="User Name" [(ngModel)]="userName">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+                <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Password">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="button" (click)="onSubmit()" class="btn btn-primary login-btn btn-block">Sign In</button>
+        </div>
+        <div class="clearfix">
+         <label class="invalid-field">{{error}}</label>
+        </div>
+    </form>
+   
+    <p class="text-center text-muted small "> Create an account? <a routerLink="/register">Sign up here!</a></p>
+</div>
