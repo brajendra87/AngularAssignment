@@ -1,0 +1,12 @@
+<h1>Student</h1>
+
+<a routerLink="home">home </a>
+<a routerLink="Student">CreateStudent</a> 
+
+
+<div class="class1" *ngIf="!loginStatus"> 
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="name">
+    <input type="text" placeholder="Email" name="email" [(ngModel)]="email">
+    <input type="text" placeholder="Address" name="address" [(ngModel)]="address">
+    <input type="button" (click)="onSubmit()" value="Submit">
+</div>
