@@ -1,0 +1,22 @@
+<h2>Content Projection</h2>
+
+<div style="margin-top:20px;">
+<div class="divLeft">
+<div class="card" style="width: 18rem;">
+        <div class="card-header">
+          
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item pointerCursor" (click)="onClick(p.name)" *ngFor="let p of products">{{p.name}}</li>
+         
+        </ul>
+      </div>
+    </div>
+
+    <div class="divRight" >
+        <app-accordion [title]="productName">
+            <div class="mypanelbody"> <h3> {{discription}}</h3></div>
+            <div class="mypanelfooter"> <h3> {{companyName}}</h3></div>
+        </app-accordion>
+    </div>
+</div>
